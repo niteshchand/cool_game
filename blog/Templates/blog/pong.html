@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Pong Game</title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'Mynew/TemplateData/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'Mynew/TemplateData/style.css' %}">
+    <script src="{% static 'Mynew/TemplateData/UnityProgress.js' %}"></script>
+    <script src="{% static 'Mynew/Build/UnityLoader.js' %}"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "{% static 'Mynew/Build/Mynew.json' %}", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body></br><h1 style="color: #009698;
+    text-align: center;
+    font-size:80px;
+    color: orange;
+    font-family: monospace;
+    font-weight: 900;
+    text-shadow: 3px 3px #e2e2e2;">Pong Game</h1>
+    </br></br>
+    <div class="content" style="margin-top:650;">
+    <div class="webgl-content"  style="margin-top: 280px">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title" style="color: antiquewhite;">Pong Game</div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+{% endblock content %}

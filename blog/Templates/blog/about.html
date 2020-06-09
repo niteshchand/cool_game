@@ -1,0 +1,80 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>About Us</title>
+	{% load static %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://kit.fontawesome.com/77ef7e99f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'blog/aboutnew.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'blog/nc.css' %}"> -->
+</head>
+<body>
+
+<div class="container">
+  <h1 class="team" style="	font-size:70px;
+  font-family: monospace;
+  color: #ff4757;
+  text-align: center;
+	font-weight: 900;
+    text-shadow: 4px 4px #e2e2e2;
+">About Us</h1>
+<p style="color: white; font-size: 25px !important; font-family: sans-serif;">Coolgames provides free games online and will process your personal information when you play our games. If you have any questions about our data practices, your rights or have any concerns or complaints, you can contact us at coolgames@gmail.com.</p>
+</div>
+</br></br>
+  	 <div class="container">
+      <h3 style="text-align: center;
+      font-size:45px;
+      color: orange;
+      font-family: verdana;
+      font-weight: 700;
+      text-shadow: 1px 1px #e2e2e2;">Basic Introduction With Us</h3></br></br>
+      
+         <h2 class="team1" style="text-align: center;
+         font-size: 45px;
+         font-family: monospace;
+         color:white;
+         font-weight: 700;
+         text-decoration: underline orange;">Who We Are?</h2>
+        <br><br>
+  	 	  <div class="card">
+  	 	  	  <div class="box">
+  	 	  	  	  <img src="/media/profile_pics/WhatsApp_Image_2020-05-17_at_8.00.08_AM.jpeg" alt="team img" />
+  	 	  	  	  <h4>Gaurav Kumar Singh</h4>
+  	 	  	  	  <h5 style="font-size: 30px;
+                 font-family: monospace;">Web Developer</h5>
+  	 	  	  	  <div class="social-links">
+
+             &nbsp; &nbsp; &nbsp; &nbsp;<a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+
+            </div>
+<br><br>
+  	 	  	  </div>
+  	 	  </div>
+  	 	  <div class="card">
+  	 	  	  <div class="box">
+  	 	  	  	  <img src="/media/profile_pics/WhatsApp_Image_2020-05-17_at_8.00.07_AM.jpeg" alt="team img" />
+  	 	  	  	  <h4>Nitesh Chand</h4>
+  	 	  	  	  <h5 style="font-size: 30px;
+                 font-family: monospace;">Web Developer</h5>
+  	 	  	  	 <div class="social-links">
+
+             &nbsp; &nbsp; &nbsp; &nbsp;<a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+
+
+            </div>
+            <br><br>
+  	 	  	  </div>
+  	 	  </div>
+	 </div>
+
+</body>
+</html>
+    {% endblock content %}

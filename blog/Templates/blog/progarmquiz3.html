@@ -1,0 +1,494 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+    <section class="banner-area py-7">
+      <div class="quizContainer container-fluid well well-lg">
+    <div id="quiz1" class="text-center">
+<h3 style="color:#d14040;position:center;left:80%;top:0%;" align="Center" ><br/><span id='Modern History Of India Quiz part 01 for all Exams' style="font-size:25px;"></span></h3>
+<h2  class="first"Style="color:#ff000;position:center;left:80%;top0%;" align="center" "font-size:20px;"><samp id="Sub heading"> Programming Language Java Quiz-03</samp></h2>
+     
+</div>
+<div class="quiz-container">
+<div class="question-number">
+   <h3>Question <span class="question-num-value"></span> of <span class="total-question"></span></h3>
+</div>
+<div class="question">
+
+</div>
+<div class="options">
+   <div id="1" class="option1" onclick="check(this)"></div>
+   <div id="2" class="option2" onclick="check(this)"></div>
+   <div id="3" class="option3" onclick="check(this)"></div>
+   <div id="4" class="option4" onclick="check(this)"></div>
+</div>
+<div class="button">
+   <button type="button" class="btn" onclick="next()">Next</button>
+</div>
+<div class="answers-tracker">
+  </div>
+</div>
+
+<div class="quiz-over">
+<div class="box">
+ <h1>
+   Amazing !<br>
+  You Got <span class="correct-answers"></span> out of <span class="total-question2"></span> answers correct! <br>
+  That's <span class="percentage"></span>
+ </h1>
+   <a class="text-info" href="{% url 'blog-quiz' %}">
+    <button type="button" onclick="tryAgain()">Done Quiz !</button>
+      </a>   
+  </div>
+</div>
+</div>   
+</section>
+
+<style>
+    /* =========================PRELOADER=======================*/
+    #page-loader {
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 1050;
+    }
+    
+    .loader-icon {
+      background: none repeat scroll 0 0 #fff;
+      border-bottom: 3px solid rgba(19, 19, 19, 0.1) !important;
+      border-left: 3px solid rgba(19, 19, 19, 0.1) !important;
+      border-radius: 100px;
+      -moz-border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -o-border-radius: 100px;
+      -ms-border-radius: 100px;
+      border-right: 3px solid #1453F2 !important;
+      border-top: 3px solid rgba(19, 19, 19, 0.1) !important;
+      height: 50px;
+      left: 50%;
+      margin: -20px 0 0 -20px;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 50px;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    .colored-border {
+      border-color: #fff;
+    }
+    
+    .fa-spin {
+      -webkit-animation: fa-spin 1s infinite linear;
+      animation: fa-spin 1s infinite linear;
+    }
+    
+    @-webkit-keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+      }
+    }
+    
+    @keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+      }
+    }
+    
+    /*--------------------------
+    PAGE BANNER
+    --------------------------*/
+    .page-banner-area {
+      padding: 180px 0px;
+    }
+    .first{
+        color: #19a79e;
+        font-size: 40px;
+        margin-top: -40px;
+        font-family: monospace;
+        text-shadow:  2px 3px #e2e2e2;
+    }
+    .quiz-container{
+     max-width: 700px;
+     min-height:500px;
+     background-color: #ffffff;
+     margin:40px auto;
+     border-radius:10px;
+     padding:30px;
+    }
+    .quiz-container::after,.quiz-container::before{
+     content: '';
+     clear: both;
+     display: table;
+    
+    }
+    .question-number,
+    .question,
+    .options,
+    .button,
+    .answers-tracker{
+        font-size: 30px;
+     float: left;
+     width: 100%;
+    } 
+    .question-number h3{
+        margin-top: -40px;
+     color:black;
+        font-size: 35px;
+        font-weight: 900;
+        font-family: monospace;
+     border-bottom: 1px solid #ccc;
+     margin:0;
+     padding-bottom:10px;
+        text-shadow:  2px 2px #e2e2e2;
+    }
+    
+    .question {
+     font-size:22px;
+     color:black;
+     padding:20px 0;
+    
+    }
+    
+    .options div{
+        width: 550px;
+      background-color: #cccccc;
+        font-family: cursive;
+      font-size:17px;
+      color:black;
+        font-weight: bold;
+      margin-bottom:10px;
+      border-radius:5px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+      padding:18px;
+      position: relative;
+      overflow:hidden;
+      cursor: pointer;
+    }
+    .options div.disabled{
+     pointer-events: none;
+    }
+    .options div.correct{
+     z-index: 1;
+     color: #fff;
+    }
+    .options div.correct::before{
+     content: '';
+     position: absolute;
+     left:0;
+     top:0;
+     width: 100%;
+     height: 100%;
+     background-color: #009432;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     z-index: -1;
+    
+     animation: animateBackground 1s ease;
+     animation-fill-mode: forwards;
+    }
+    @keyframes animateBackground{
+     0%{
+      transform: translateX(-100%);
+     }
+     100%{
+      transform: translateX(0%);
+     }
+    }
+    .options div.wrong{
+     z-index: 1;
+     color: #fff;
+    }
+    .options div.wrong::before{
+     content: '';
+     position: absolute;
+     left:0;
+     top:0;
+     width: 100%;
+     height: 100%;
+     background-color:#EA2027;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     z-index: -1;
+    
+     animation: animateBackground 1s ease;
+     animation-fill-mode: forwards;
+    }
+    @keyframes animateBackground{
+     0%{
+      transform: translateX(-100%);
+     }
+     100%{
+      transform: translateX(0%);
+     }
+    }
+    
+    .button .btn{
+     padding:15px 50px;
+     border-radius:5px;
+    font-size: 18px !important;
+        font-weight: 900 !important;
+     cursor: pointer;
+     background-color:#009688;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     color:#ffffff;
+     border: none;
+     display: inline-block;
+     margin:15px 0 20px;
+    }
+    .answers-tracker{
+     border-top:1px solid #ccc;
+     padding-top: 15px;
+    }
+    .answers-tracker div{
+     height: 55px;
+     width: 55px;
+     background-color: #cccccc;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     display: inline-block;
+     border-radius: 50%;
+     margin-right:5px;
+    }
+    
+    .answers-tracker div.correct{
+    background-color: #009432;
+     background-image:url('correct.png');
+         box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 120%;
+    }
+    .answers-tracker div.wrong{
+     background-color: #EA2027;
+     background-image:url('wrong.png');
+         box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 120%;
+    }
+    
+    .quiz-over{
+     position: fixed;
+     left:0;
+     top:0;
+     width: 100%;
+     height: 100%;
+     background-color:rgba(0,0,0,0.9);
+     z-index: 10;
+     display: none;
+     align-items: center;
+     justify-content: center;
+    }
+    .quiz-over.show{
+     display: flex;
+    }
+    .quiz-over .box{
+     background-color: #009688;
+        color: white;
+        font-weight: 100;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+     padding:30px;
+     border-radius:10px;
+     text-align: center;
+     flex-basis: 700px;
+     max-width:700px;
+     color:#ffffff;
+    }
+    
+    .quiz-over .box h1{
+        color: white;
+     font-size:36px;
+     margin:0 0 20px;
+    }
+    
+    .quiz-over .box button{
+     padding:15px 50px;
+     border:none;
+     background-color:#FF9800;
+     border-radius:5px;
+     font-size:16px;
+     margin:15px 0 20px;
+     color:#ffffff;
+    }
+    </style>
+
+<script>
+
+  const options=document.querySelector(".options").children;
+  const answerTrackerContainer=document.querySelector(".answers-tracker");
+  const questionNumberSpan=document.querySelector(".question-num-value");
+  const totalQuestionSpan=document.querySelector(".total-question");
+  const correctAnswerSpan=document.querySelector(".correct-answers");
+  const totalQuestionSpan2=document.querySelector(".total-question2");
+  const percentage=document.querySelector(".percentage");
+  const question=document.querySelector(".question");
+  const op1=document.querySelector(".option1");
+  const op2=document.querySelector(".option2");
+  const op3=document.querySelector(".option3");
+  const op4=document.querySelector(".option4");
+  let questionIndex;
+  let index=0;
+  let myArray=[];
+  let myArr=[];
+  let score=0;
+
+  // questions and options and answers
+
+  const questions=[
+   {
+    q:'Which keyword is used to create a class in java ?',
+    options:['a) MyClass','b) class','c) className','d) class()'],
+    answer:2
+   },
+   {
+    q:'How do you start writing an if statement in java ?',
+    options:['a) if x>y :','b) if x>y then:','c) if(x>y)','d) All of the above'],
+    answer:3
+   },
+   {
+    q:' Which keyword is used to return a value inside a method ?',
+    options:['a) return','b) break','c) void','d) get '],
+    answer:1
+   },
+   {
+    q:' Which operator is used to add together two values  ?',
+    options:['a) The & sign','b) The * sign','c) The / sign','d) The + sign'],
+    answer:4
+   },
+   {
+    q:'Which method can be used to find the highest value of x and y ?',
+    options:['a) Math.max(x,y)','b) Math.largest(x,y)','c) Math.maximum(x,y)','d)  Math.maxNum(x,y)'],
+    answer:1
+   },
+  ]
+
+  // set questions and options and question number
+  totalQuestionSpan.innerHTML=questions.length;
+  function load(){
+        questionNumberSpan.innerHTML=index+1;
+         question.innerHTML=questions[questionIndex].q;   
+         op1.innerHTML=questions[questionIndex].options[0];
+         op2.innerHTML=questions[questionIndex].options[1];
+         op3.innerHTML=questions[questionIndex].options[2];
+         op4.innerHTML=questions[questionIndex].options[3];
+         index++;
+  }
+
+  function check(element){
+   if(element.id==questions[questionIndex].answer){
+    element.classList.add("correct");
+    updateAnswerTracker("correct")
+    score++;
+    console.log("score:"+score)
+   }
+   else{
+    element.classList.add("wrong");
+    updateAnswerTracker("wrong")
+
+   }
+   disabledOptions()
+  }
+ 
+  function disabledOptions(){
+     for(let i=0; i<options.length; i++) {
+      options[i].classList.add("disabled");
+      if(options[i].id==questions[questionIndex].answer){
+       options[i].classList.add("correct");
+      }
+
+     }
+  }
+
+  function enableOptions(){
+     for(let i=0; i<options.length; i++) {
+      options[i].classList.remove("disabled","correct","wrong");
+     }
+  }
+
+  function validate(){
+      if(!options[0].classList.contains("disabled")){
+        alert("Please Selecto one option")
+      }
+      else{
+       enableOptions();
+       randomQuestion();
+      }
+  }
+
+  function next(){
+    validate();
+  }
+ 
+  function randomQuestion(){
+   let randomNumber=Math.floor(Math.random()*questions.length);
+   let hitDuplicate=0;
+       if(index==questions.length){
+        quizOver();
+       }
+       else{
+         if(myArray.length>0){
+             for(let i=0; i<myArray.length; i++){
+               if(myArray[i]==randomNumber){
+                  hitDuplicate=1;
+                  break;
+               }
+             }
+             if(hitDuplicate==1){
+              randomQuestion();
+             }
+             else{
+               questionIndex=randomNumber; 
+              load();
+              myArr.push(questionIndex);
+             }
+         }
+         if(myArray.length==0){
+           questionIndex=randomNumber; 
+           load();
+           myArr.push(questionIndex);
+         }
+
+       myArray.push(randomNumber);
+     
+      }
+  }
+   
+  function answerTrakcer(){
+     for(let i=0; i<questions.length; i++){
+      const div=document.createElement("div")
+         answerTrackerContainer.appendChild(div);
+     }
+  }
+
+ function updateAnswerTracker(classNam){
+   answerTrackerContainer.children[index-1].classList.add(classNam);
+ }
+
+ function quizOver(){
+    document.querySelector(".quiz-over").classList.add("show");
+    correctAnswerSpan.innerHTML=score;
+    totalQuestionSpan2.innerHTML=questions.length;
+    percentage.innerHTML=(score/questions.length)*100 + "%";
+ }
+
+ function tryAgain(){
+     window.location.reload();
+ }
+
+ window.onload=function(){
+  randomQuestion();
+  answerTrakcer();
+
+}
+
+</script>
+
+    {% endblock content %}

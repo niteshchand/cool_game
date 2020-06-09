@@ -1,0 +1,79 @@
+{% extends "blog/base.html" %}
+	{% block content %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/contact.css' %}">
+	
+	
+	<h1 style="color: #009698;
+	text-align: center;
+	font-size:70px;
+	font-family: monospace;
+	font-weight: 900;
+	text-shadow: 4px 4px #e2e2e2;">Contact Us</h1>
+	</br></br>
+	<p style="color: white; font-size: 25px !important; margin-left: 10px !important; margin-right: 10px !important; font-family: sans-serif;"> If you have any questions about our data practices, your rights or have any concerns or complaints, you can contact us at coolgames@gmail.com.</p>
+	</br></br>
+<h3 style="text-align: center;
+	font-size:40px;
+	font-family: verdana;
+	font-weight: 700;
+	color: #10ac84;
+	text-shadow: 1px 1px #e2e2e2;
+	">Know More About Cool Games</h3>
+	</br></br>
+<h2 style="text-align: center;
+	font-size: 40px;
+	font-family: monospace;
+	font-weight: 700;
+  color: antiquewhite;
+	text-decoration: underline orange;">Complete Contact Form</h2>
+<br></br></br></br>
+<div class="container" style="border-radius: 5px;
+width: 70% !important;
+background-color: #696969;
+box-shadow: 0px 0px 50px black;
+padding: 20px;
+box-shadow:0px 0px 100px lightslategray;">
+	<form action="action_page.php">
+  
+	  <label for="fname">First Name</label>
+	  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+		
+	  <label for="lname">Last Name</label>
+	  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+	  <label for="country">Country</label>
+	  <select id="country" name="country">
+		<option value="australia">Inida</option>
+		<option value="australia">Australia</option>
+		<option value="canada">Canada</option>
+		<option value="usa">USA</option>
+	  </select>
+  
+	  <label for="subject">Subject</label>
+	  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+	  <input type="submit" value="Submit">
+  
+	</form>
+  </div>
+<br><br><br>
+<h2 class="text" style="font-size: 40px;
+	font-family: monospace;
+  color: antiquewhite;
+	font-weight: 700;
+	text-decoration: underline red;text-align: center;">Here We Are&nbsp;<img src="/media/profile_pics/google.png" style="width: 50px;
+   height: 50px"></h2>
+<br>
+ <div class="mapouter img1">
+   <div class="gmap_canvas">
+     <iframe width="750" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Guru%20Nanak%20Dev%20Institute%20Of%20Technology&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+     </iframe><a href="https://www.embedgooglemap.net/en/">embed map on website</a>
+     </div>
+     <style>.mapouter{position:relative;text-align:right;height:500px;width:750px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:750px;margin-left:25%;border: 4px solid lightgreen;padding: 10px;border-radius: 5px;
+    }
+ 
+</style></div>
+
+    
+    {% endblock content %}

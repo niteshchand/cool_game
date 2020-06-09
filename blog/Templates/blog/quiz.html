@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+</br></br></br></br>
+    <article class="media content-section" style="width:80%; box-shadow: 0px 0px 10px black; border: 1px solid #252833; background-color: #252833;">
+    <section></br>
+        <h1 style="text-align: center; text-decoration: underline lightseagreen; font-family: monospace; font-size: 60px; font-weight: 900; text-shadow: 2px 2px #e2e2e2; color: #10ac84; ">Quizzes</h1>
+       <hr color="white">
+    </br>
+    </br>
+       <h3 class="first" style=" font-size:30px; font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight: 800; color:#ff4757;"><a class="first text-light"style="text-decoration:none;" href="{% url 'blog-quiz1' %}"><i class="fa fa-hand-o-right"></i>&ensp;&nbsp;1. Quiz Based On Computer</a></h3></br>
+      <p class="p" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">A computer is a man made electronic machine which stores, and processes data to produce meaningful information as output. It very fast and does not make mistakes but its capacity is limited. It operates under the control of a set of instructions that is stored in its memory unit. A computer accepts data from an input device and processes it into useful information which it displays on its output device :....
+        <a class="text-info" href="{% url 'blog-quiz1' %}" style="text-decoration:none; color: #ff4757; text-shadow: 1px 1px #e2e2e2;" > 
+            <b>QUIZ</b></a></p>
+        </br></br>
+      <h3 class="second" style=" font-size:30px; font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight: 800; color:#ff4757;"><a class="second text-light"style="text-decoration:none;" href="{% url 'blog-progarmquiz1' %}"><i class="fa fa-hand-o-right"></i>&ensp;&nbsp;2. Quiz Based On Programming Languages</a></h3>
+      <p class="p" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+        <br>A programming language is a  set of grammatical rules for instructing a computer or computing device to perform specific task. Programming language is a way of communication between user and computer. The term programming language usually refers to high-level languages, such as BASIC, C, C++, COBOL, Java, FORTRAN, Ada, and Pascal.Each programming language has a unique set of keywords (words that it understands) and a special syntax for organizing program instructions:....
+        <a class="text-info" href="{% url 'blog-progarmquiz1' %}" style="text-decoration:none; color: #ff4757; text-shadow: 1px 1px #e2e2e2;">
+          <b>QUIZ</b></a></p>
+        </br></br>
+  </section>
+</article>
+</br></br></br></br>
+    {% endblock content %}

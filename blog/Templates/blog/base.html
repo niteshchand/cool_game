@@ -1,0 +1,297 @@
+{% load static %}
+<html>
+    <head>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/77ef7e99f8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/gc.css' %}">
+
+
+    <!-- unity content -->
+    
+        
+        {% if title %}
+            <title>Cool Game -{{ title }}</title>
+        {% else %}
+            <title>Cool Game</title>
+    
+        {% endif %}
+        </head>
+
+        <body>
+
+          <div class=" container-fluid page " style="background-color: #F4F7FC">
+
+            <br>
+          <h1 class="logo-text"><span>C</span></h1>
+                                 <div class="emoji wow ">
+                   <div class="face face-wow">
+                  <div class="eyebrows-wow"></div>
+                  <div class="eyes-wow"></div>
+                  <div class="mouth-wow"></div>
+                   </div>
+          
+          
+                     </div>
+                     <div class="emoji1 wow">
+                   <div class="face face-wow">
+                  <div class="eyebrows-wow"></div>
+                  <div class="eyes-wow"></div>
+                  <div class="mouth-wow"></div>
+                   </div>
+          
+                     </div>
+              <h1 class="text1" style="color:black;"><span>l</span> games</h1>
+          
+          
+                                  </a>
+          
+               <div class="row">
+          <i class="fas fa-mobile-alt icon">&nbsp;</i>
+          <p><b>+918700498771</b> <br> Call Free</p>
+          </div>
+          <div class="row">
+          <i class="far fa-envelope icon" style="margin-left: 70%;">&nbsp;</i>
+          <p><b>coolgames@gmail.com</b> <br> Email Us</p>
+          </div>
+          </div>
+          </div>
+          
+          &nbsp;
+          
+          <!-- <div>
+            <h1 class="logo-text"><span>C</span></h1>
+
+            <div class="emoji wow">
+              <div class="face face-wow">
+             <div class="eyebrows-wow"></div>
+             <div class="eyes-wow"></div>
+             <div class="mouth-wow"></div>
+              </div>
+               
+               
+                </div>
+                <div class="emoji1 wow">
+              <div class="face face-wow">
+             <div class="eyebrows-wow"></div>
+             <div class="eyes-wow"></div>
+             <div class="mouth-wow"></div>
+              </div>
+                
+                </div>
+         <h1 class="text1"><span>l</span> games</h1>  
+           </div> -->
+          <!-- email and call free -->
+          <!-- <div>
+          <div>
+                    <div class="top-info-block d-inline-flex">
+                        <div class="icon-block">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="ti-mobile"></i>
+                        </div>
+                        <div>
+                            <h5>+918700498771</h5>
+                            Call Free
+                        </div>
+                    </div>
+
+                    <div class="top-info-block d-inline-flex">
+                        <div class="icon-block">
+                           &nbsp;&nbsp;&nbsp;&nbsp;<i class="ti-email"></i>
+                        </div>
+                        <div>
+                            <h5 class="text">coolgames@gmail.com</h5>
+                           Email Us
+                        </div>
+                    </div>
+                   
+                    
+                    
+                  </div>
+                    </div> -->
+
+
+
+
+
+
+
+          
+            <!-- <nav class="navbar navbar-expand-md navbar-light bg-success ">
+              <div class="container">
+                <a class="navbar-brand mr-4" href="{% url 'blog-index' %}">Cool Game</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                  <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link p" href="{% url 'blog-index' %}"><i class="fas fa-home"></i>&nbsp;Home</a>
+                    <a class="nav-item nav-link" href="{% url 'blog-games' %}"><i class="fas fa-gamepad"></i>&nbsp;Games</a>
+                    <a class="nav-item nav-link" href="{% url 'blog-blog' %}"><i class="fas fa-blog"></i>&nbsp;Blog</a>
+                    <a class="nav-item nav-link" href="{% url 'blog-quiz' %}"><i class="fas fa-question"></i>&nbsp;Quiz</a>
+              
+               </div> -->
+                  <!-- Navbar Right Side -->
+                  <!-- <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a class="nav-item nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="nav-item nav-link" href="#"><i class="fab fa-twitter"></i></a>
+                     {% if user.is_authenticated %}
+                     <a class="nav-item nav-link" href="{% url 'blog-create' %}">New Blog</a>
+                     <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                     <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                    <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </nav> -->
+            <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <!-- <a class="nav-link fas fa-gamepad" href="{% url 'blog-index' %}"></a> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse"style="color: white !important;" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link fas fa-home" href="{% url 'blog-index' %}">&nbsp;HOME &nbsp;<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fas fa-gamepad" href="{% url 'blog-games' %}">&nbsp;GAMES&nbsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fas fa-blog" href="{% url 'blog-blog' %}">&nbsp;&nbsp;BLOG&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link fas fa-question" href="{% url 'blog-quiz' %}">&nbsp;&nbsp;QUIZ</a>
+                  </li>
+                  <!-- <li class="nav-item ">
+                    <a class="nav-link fas fa-question" href="{% url 'blog-about' %}">&nbsp;&nbsp;ABOUT</a>
+                  </li> -->
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="nav-link fab fa-facebook-square" href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fab fa-instagram" href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link fab fa-twitter-square" href="#"></a>
+                  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {% if user.is_authenticated %}
+                    <li class="nav-item" ><a class="nav-link fas fa-plus-square" href="{% url 'blog-create' %}">&nbsp;&nbsp;NEWBLOG&nbsp;&nbsp;</a></li> 
+                     <li class="nav-item"><a class="nav-link fas fa-user-circle" href="{% url 'profile' %}">&nbsp;&nbsp;PROFILE&nbsp;&nbsp;</a></li>
+                     <li class="nav-item"><a class="nav-link fas fa-sign-out-alt" href="{% url 'logout' %}">&nbsp;&nbsp;LOGOUT&nbsp;&nbsp;</a></li>
+                     
+                    {% else %}
+                      <li class="nav-item">
+                        <a class="nav-link f fas fa-user" href="{% url 'register' %}">&nbsp;&nbsp;SIGNUP&nbsp;&nbsp;</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link fas fa-sign-in-alt" href="{% url 'login' %}">&nbsp;&nbsp;LOGIN</a>
+                    </li>
+                    {% endif %}
+            
+                </ul>
+              </div>
+            </nav>
+
+          </header>
+          <main role="main" class="container">
+            <div class="row">
+          
+              <div class="div-content">
+                <!-- This is the down the baar -->
+              </br></br></br></br>
+                {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+                  {% endfor %}
+                {% endif %}
+                {% block content %} {% endblock %}
+              </div>
+             
+              </div>
+            </div>
+          </main>
+      
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- Footer -->
+        </br></br></br></br>
+        <footer id="footer">
+          <div class="footer-top"><br><br><br>
+            <div class="container">
+              <div class="row">
+      
+                <div class="col-lg-3 col-md-6 footer-info">
+      
+                  <h3><span>Cool</span>games</h3>
+                  <p>Welcome to online game website coolgames, where you can play a some free online games including action game, puzzle games etc.  </p>
+                </div>
+      
+                <div class="col-lg-3 col-md-6 footer-links">
+                  <h4>Useful Links</h4>
+                  <ul >
+                   <a href="{% url 'blog-index' %}"> <li><i class="ion-ios-arrow-right gk "></i> HOME</li></a>
+                   <a href="{% url 'blog-games' %}"> <li><i class="ion-ios-arrow-right gk"></i> GAMES</li></a>
+                   <a href="{% url 'blog-blog' %}"> <li><i class="ion-ios-arrow-right gk"></i> BLOG</li></a>
+                    <a href="{% url 'blog-quiz' %}"><li><i class="ion-ios-arrow-right gk"></i> QUIZ</li></a>
+                  </ul>
+                </div>
+      
+                <div class="col-lg-3 col-md-6 footer-contact">
+                  <h4>Contact Us</h4>
+                  <p>
+                    ABC STREET NO. 5 <br>
+                     NEW DELHI <br>
+                    INDIA<br>
+                    <strong>Phone:</strong> +918700498771<br>
+                    <strong>Email:</strong> coolgames@gmail.com<br>
+                  </p>
+      
+                  <div class="social-links">
+      
+                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+      
+      
+                  </div>
+      
+                </div>
+      
+                <div class="col-lg-3 col-md-6 footer-newsletter">
+                  <h4>TERMS OF SERVICES</h4>
+                    <a href="{% url 'blog-privacy' %}"><p style="color: white">PRIVACY POLICY</p></a>
+                    <a href="{% url 'blog-contact' %}"><p style="color: white">CONTACT US</p></a>
+                    <a href="{% url 'blog-about' %}"><p style="color: white">ABOUT US</p></a>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+      
+            <div class="copyright">
+                &copy; Copyright <strong>coolgames</strong> | Made with  <i class="fa fa-heart"></i> by cool games
+              </div>
+      
+      
+
+        </html>

@@ -1,0 +1,167 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+    {% load static %}
+
+    <div class="wrap">
+        <div class="container-slider-video" style="width: 100%;
+      height: auto;
+      max-height: 80vh;">
+          <div id="video-slider" class="carousel slide" data-ride="carousel" data-interval='10000'>
+            <ol class="carousel-indicators">
+              <li data-target="#video-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#video-slider" data-slide-to="1" ></li>
+            </ol>
+            <div class="carousel-inner">
+              
+             <div class="carousel-item active" style="position: relative;
+      height:100vh;">
+           <video id="videoSL" loop muted autoplay style="position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      object-fit: cover;">
+                  <source src="{% static 'Myfile/video/ping.mp4' %}" type="video/mp4">
+                </video>
+     <div class="container-fluid content-video" style="height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-6 content">
+                      <h2 style="display: inline-block;
+        font-size: 50px;
+        font-weight: 600 !important;
+        text-transform: uppercase;">Play For Free </h2>
+                      <p style="color: #fff;
+      font-size:35px !important;">Start your Cool Games account and play free games.</p>
+                      <a href="{% url 'register' %}" class="btn btn-info" style="text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 17px !important;
+      font-weight: bold !important;background-color: orange">Register For Free</a>
+                    </div>
+                  </div>
+                </div>
+    
+        </div>
+    
+    
+    
+    
+        <div class="carousel-item" style="position: relative;
+      height:100vh;">
+          <video id="videoSL" loop muted autoplay style="position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 100%;
+      object-fit: cover;">
+                  <source src="{% static 'Myfile/video/panda.mp4' %}" type="video/mp4">
+                </video>
+            
+     <div class="container-fluid content-video" style="height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-6 content">
+                      <h2 style="display: inline-block;
+        font-size: 50px;
+        font-weight: 600 !important;
+        text-transform: uppercase;color:white;">Play Free Games</h2>
+                      <br><br>
+                      <a href="{% url 'blog-games' %}" class="btn btn-info" style="text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 17px !important;
+      font-weight: bold !important;background-color: orange">Browse All Games</a>
+                    </div>
+                  </div>
+                </div>
+    
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#video-slider" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#video-slider" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+
+
+             <!-- <div class="card">
+              <div class="box">
+                  <img src="/media/profile_pics/computer124556.jpg" alt="team img" />
+                  <h4>Game</h4>
+                  <h5 style="font-size: 20px;
+                  font-family: monospace;">game project is developed using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score.
+                   <a href="{% url 'blog-games' %}">
+                   <p style="color:white;
+                   text-align:right;">READ MORE</p>
+                   </a>
+                    </h5>
+                  <br><br>
+              </div>
+          </div> -->
+        <!-- </br></br></br></br></br> -->
+          <div class="card" style="width: 18rem; align-items: center !important;background-color: #01a3a4; margin-top: 200px !important;">
+            <img class="card-img-top" src="/media/profile_pics/gamelogo.png" alt="Card image cap" style="background-size: cover;" height="180px" width="266px">
+            <div class="card-body" >
+              <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif; ">Game</h5>
+              <p class="card-text" style="font-size: 18px !important; font-weight: bold; color: white;">Game project is developed using Unity Game Engine. </p></br>
+              <a href="{% url 'blog-games' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem; align-items: center !important; background-color: #01a3a4;">
+            <img class="card-img-top" src="/media/profile_pics/img3.png" alt="Card image cap" style="background-size: cover; widows: 286px !important ;height: 180px !important;" height="180px" width="266px">
+            <div class="card-body" >
+              <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif;">Quiz</h5>
+              <p class="card-text" style="font-size: 18px !important;font-weight: bold; color: white; ">"Quiz" Hey Guys the above link will help you play Quiz.</p> </br>
+              <a href="{% url 'blog-quiz' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+            </div>
+          </div>
+          
+          
+          
+          <style type="text/css">
+            .card{
+              margin-top: auto;
+              margin-left: 105px;
+              display: inline-block;
+              padding: 10px 10px;
+              /* margin: 30px; */
+            }
+            .card:hover{
+              box-shadow:0px 0px 100px black;
+            }
+            /* @media max-width:(768px) {
+             .card{
+              background-size: cover;
+             }
+            } */
+          </style>
+          <!-- <div class="card">
+            <div class="box">
+                <img src="/media/profile_pics/img3.png" alt="team img" />
+                  <h4>Quiz</h4>
+                  <h5 style="font-size: 20px;font-family: monospace;">"Quiz" Hey Guys the above link will help you play Quiz.So Click Right Know and Enjoy For Lastest Quiz vist cool_game.com
+                  <a href="{% url 'blog-quiz' %}">
+                  <p style="color: antiquewhite;text-align:right;">READ MORE</p></a></h5>
+              
+           
+<br><br>
+            </div>
+        </div> -->
+        
+    {% endblock content %}
+    

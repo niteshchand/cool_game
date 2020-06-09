@@ -1,0 +1,482 @@
+
+body{
+  margin-top: 0px;
+  background-color:#2d3035;
+}
+.page{
+    width: 100% !important;
+    height: 150px !important;
+
+}
+.logo-text span{
+    font-family: 'Luckiest Guy', cursive;
+    margin-top: 10px !important;
+    margin-left: 10% !important;
+    font-size: 60px;
+    color:#10ac84  ;
+}
+
+.text1 span{
+    font-family: 'Bree Serif', serif;
+    margin-left: 22% !important;
+    color: #10ac84;
+}
+.text1{
+    font-weight: 100;
+    font-family: 'Bree Serif', serif;
+     font-size: 60px;
+      margin-top: -164px !important;
+    font-weight: 900;
+}
+
+.top{
+    margin-top: -10px;
+    font-size: 55px;
+    font-weight: bold;
+    font-family: monospace;
+    color: #009698 !important;
+    text-shadow: 4px 4px #e2e2e2;
+}
+.pk{
+    margin-top:15px;
+/*    margin-left: 33%; */
+    width: 100%;
+   border: 2px solid #005050;
+   box-shadow:4px 4px #e2e2e2;
+}
+
+.card{
+ 	margin-left: 13%;
+	width:30%;
+	float: left;
+/* 	padding:0px 10px; */
+}
+ .card .box {
+	padding:15px;
+	background-color: #2d3035;
+	border-radius:5px;
+	transition: margin 1s ease,box-shadow 1s ease;
+}
+ .card .box:hover{
+	margin-top:-15px;
+	box-shadow:0px 0px 40px black;
+}
+ .card .box img{
+	width:290px;
+	height:280px;
+	display: block;
+	margin:auto;
+/* 	border-radius:50%; */
+
+}
+
+ .card .box h4{
+	font-size: 20px;
+	font-family: open sans;
+	margin:20px 0px 10px;
+	color:#ea5e71;
+	text-align: center;
+	font-weight: 700;
+}
+
+ .card .box h5{
+	font-size:16px;
+	font-family: open sans;
+	font-weight: 600;
+	color:#b9b9b9;
+	margin:0px 0px 15px;
+	text-align: center;
+}
+
+/*responsive*/
+
+@media(max-width: 991px){
+	 .card{
+	 	margin-left: 0%;
+		width:50%;
+		margin-bottom:30px;
+	}
+}
+
+@media(max-width:550px){
+	 .card{
+	 	margin-left: 0%;
+		width:100%;
+	}
+}
+
+
+
+.emoji
+    {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+        margin: 40px;
+        margin-top: -70px;
+        margin-left: 13% ;
+        background-color:  deepskyblue;
+    }
+.emoji1
+    {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+        margin: 100px;
+        margin-top: -93px;
+        margin-left: 17.5% ;
+        background-color: #ff4757 ;
+    }
+
+     .face-wow
+    {
+        animation: wow-face 3s linear infinite;
+    }
+    .eyebrows-wow
+    {
+        position: absolute;
+        top: 11px;
+        left: 25px;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        box-shadow: -7.5px 0 0 0 #000, -17px 0 0 0 #000, 6.5px 0 0 0 #000, 16px 0 0 0 #000;
+        animation: wow-brow 3s linear infinite;
+    }
+
+     .eyebrows-wow:before,
+    .eyebrows-wow:after
+    {
+        position: absolute;
+        content: '';
+        width: 18.5px;
+        height: 20px;
+        border: 4px solid transparent;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-top-color: black;
+        top: -2px;
+
+    }.eyebrows-wow:before
+    {
+        margin-left: -19.5px;
+    }
+    .eyebrows-wow:after
+    {
+        margin-left: 4px;
+    }
+     .eyes-wow
+    {
+        position: absolute;
+        width: 8px;
+        height: 10px;
+        left: 23px;
+        top: 16px;
+        border-radius: 50%;
+        box-shadow: 12px 0 0 0 #000, -12px 0 0 0 #000;
+    }
+
+     .mouth-wow
+    {
+        position: absolute;
+        width: 15px;
+        height: 20px;
+        left: 20px;
+        top: 26px;
+        border-radius: 50%;
+        background: #000;
+        animation: wow-mouth 3s linear infinite;
+    }
+
+    @keyframes wow-face
+    {
+        15%, 25%{transform: rotate(10deg) translateX(-2px);}
+        45%, 65% {transform: rotate(-10deg) translateX(1px);}
+        75%, 100% {transform: rotate(0deg) translateX(0px);}
+    }
+
+     @keyframes wow-brow
+    {
+    15%, 65%{top: 10px;}
+    75%, 100%, 0% {top: 8px;}
+    }
+      @keyframes wow-mouth
+    {
+    10%, 30%
+        {
+            width: 9px;
+            height: 9px;
+            left: 23px;
+        }
+
+    50%, 70%
+        {
+            width: 15px;
+            height: 18px;
+            left: 20px;
+        }
+
+    75%, 100%{height: 22px;}
+    }
+
+.icon{
+    font-size: 50px !important;
+    color: #21c87a;
+    margin-left: 55%;
+    display: inline-block;
+}
+.navbar{
+    min-height: 95px;
+}
+.navbar-expand-lg{
+    background-color: #21c87a !important;
+    border-radius: 5px !important;
+}
+
+p{
+    font-size: 16px !important;
+    font-family: monospace;
+}
+.row{
+  margin-top: -65px;
+}
+
+.bg-light{
+    margin-top: -65px;
+    background-color: #21c87a !important;
+    margin-left: 10% !important;
+    width: 80% !important;
+    border-radius: 5px !important;
+
+}
+.nav-link{
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.nav-link:hover{
+    color: green !important;
+    font-weight: bold !important;
+}
+
+@media only screen and (max-width: 800px) {
+ .page {
+    display: none;
+      }
+  .navbar{
+    margin-top: 30px;
+  }
+  .navbar{
+    min-height: 70px;
+  }
+}
+
+.content-section {
+  width:70%;
+  background: white;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid black
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+#footer {
+
+  margin-top: auto;
+background: #000;
+padding: 0 0 20px 0;
+color: #fff;
+font-size: 14px;
+}
+
+#footer .footer-top {
+background: #111;
+padding: 60px 0 40px 0;
+}
+
+#footer .footer-top .footer-info {
+margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+font-size: 32px;
+margin: 0 0 20px 0;
+padding: 2px 0 2px 10px;
+line-height: 1;
+font-family: 'Bree Serif', serif;
+font-weight: 700;
+letter-spacing: 3px;
+border-left: 4px solid #18d26e;
+}
+#footer .footer-top .footer-info h3 span{
+  color: #fff;
+}
+
+#footer .footer-top .footer-info p {
+font-size: 14px;
+line-height: 24px;
+margin-bottom: 10;
+font-family: "Montserrat", sans-serif;
+color: #fff;
+}
+#footer .footer-top .social-links a {
+font-size: 18px;
+display: inline-block;
+background: #333;
+color: #eee;
+line-height: 1.5;
+padding: 10px 0;
+margin-right: 4px;
+border-radius: 50%;
+text-align: center;
+width: 46px;
+height: 46px;
+transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+background: #18d26e;
+color: #fff;
+}
+#footer .footer-top .row h3{
+  color: deepskyblue;
+  font-family: 'Bree Serif', serif;
+  font-weight: 900;
+}
+#footer .footer-top h4 {
+font-family: 'Bree Serif', serif;
+font-size: 18px;
+  letter-spacing: 2.5px;
+font-weight: bold;
+color: #fff;
+text-transform: uppercase;
+position: relative;
+padding-bottom: 12px;
+}
+
+#footer .footer-top h4::before, #footer .footer-top h4::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+height: 2px;
+}
+
+#footer .footer-top h4::before {
+right: 0;
+background: #555;
+}
+
+#footer .footer-top h4::after {
+background: #18d26e;
+width: 60px;
+}
+
+#footer .footer-top .footer-links {
+margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+padding-right: 8px;
+color: #ddd;
+}
+
+#footer .footer-top .footer-links ul li {
+border-bottom: 1px solid #333;
+padding: 12px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+color: #eee;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+color: #18d26e;
+}
+
+#footer .copyright {
+ background: black;
+text-align: center;
+  font-family: cursive;
+  font-size: 16px;
+padding-top: 20px;
+  color: white;
+}
+#footer .copyright i{
+ color: red;
+}
+
+
+.div-content {
+  width: 100%;
+}
+
+/* media queries */
+@media (max-width:600px){
+    .content-section{
+        width:95%;
+    }
+}

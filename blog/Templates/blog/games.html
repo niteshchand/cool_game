@@ -1,0 +1,159 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+    <!--================================================== -->
+    <!-- <article class="media content-section">
+      <div class="media">
+        <section class="banner-area py-7">
+          <div class="container">
+             <div>
+                 <h1 class="top" style="text-align: center;">TOP GAMES</h1>
+                  <hr class="pk">      
+   <div class="container-fluid" style="margin-top: 100px;">
+     <div class="row">
+       <div class="col-sm-12">
+         <div id="inam" class="carousel slide" data-ride="carousel">
+           <div class="carousel-inner">
+             <div class="carousel-item active">
+                <div class="container">
+                 <div class="row">
+                   <div class="col-sm-12 col-lg-6">
+                     <div class="card" style="width: 300px;margin: auto;">
+                     </br></br>
+                       <img src="/media/profile_pics/img1_nPhQ3Ar.png" class="card-img-top">
+                       <div class="card-body">
+                         <h4 class="card-title">PING - PAN</h4>
+                         <p class="card-text">“Ping-Pan” game project is developed using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score.</p>
+                        <button  class="btn2">
+                           <a href="{% url 'blog-panda' %}">
+                            <p class="read">READ MORE</p>
+                            </a>
+                        </button>
+                       </div>
+                       
+                     </div>
+                     
+                   </div>
+                   <div class="col-sm-12 col-lg-6">
+                     <div class="card" style="width: 300px;">
+                      </br></br>
+                       <img src="/media/profile_pics/img2_x7eKjPi.png" class="card-img-top">
+                       <div class="card-body">
+                         <h4 class="card-title"> SLASH HERO</h4>
+                         <p class="card-text"> “Slash Hero” game project is created using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score points.</p>
+                           <button  class="btn2 "><a href="{% url 'blog-panda' %}"><p class="read">READ MORE</p></a></button>
+                      
+                         </div>
+                         </div>
+             </div>
+             
+           </div>
+                 </div>
+               </div>
+         </div>
+           </div>
+       </div>
+       
+     </div>
+     
+   </div>
+              </div>
+           </div>
+           </section>
+      </div>
+         </article> -->
+         <!-- <div class="card">
+          <div class="box">
+              <img src="/media/profile_pics/img1_nPhQ3Ar.png" alt="team img" />
+              <h4><a class="text-light" href="{% url 'blog-panda' %}" style="font-size:40;">Ping-Pan</a></h4>
+              <h5 style="font-size: 20px;
+              font-family: monospace;">“Ping-Pan” game project is developed using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score.
+               <a href="{% url 'blog-panda' %}">
+               <p style="color:white;
+               text-align:right;">READ MORE</p>
+               </a>
+                </h5>
+              
+<br><br>
+          </div>
+      </div>
+      <div class="card">
+        <div class="box">
+            <img src="/media/profile_pics/img2_x7eKjPi.png" alt="team img" />
+            <h4><a class="text-light" href="{% url 'blog-panda' %}" style="font-size: 40;">SLASH HERO</a></h4>
+            <h5 style="font-size: 20px;
+            font-family: monospace;"> “Slash Hero” game project is created using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score points.
+                              <a href="{% url 'blog-panda' %}">
+                               <p style="color: antiquewhite;
+                               text-align:right;">READ MORE</p>
+                               </a></h5>
+          
+       
+<br><br>
+        </div>
+    </div> -->
+    <h1 style="color: #009698;
+	text-align: center;
+  font-size:70px;
+  color: orange;
+  margin-left: 7%;
+
+	font-family: monospace;
+	font-weight: 900;
+	text-shadow: 3px 3px #e2e2e2;">GAMES</h1>
+  </br></br></br>
+    <div class="card" style="width: 18rem; align-items: center !important;  background-color: #01a3a4;">
+      <img class="card-img-top" src="/media/profile_pics/shoot_them.png" alt="Card image cap" style="background-size: cover;" height="180px" width="266px">
+      <div class="card-body" >
+        <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif;">SHOOT THEM</h5>
+        <p class="card-text" style="font-weight: bold; color: white;" >“Shoot them” game project is developed using Unity Game Engine. Talking about the gameplay,</br> user has to kill the enemy in order to gain score.</p>
+        <a href="{% url 'blog-shoot' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+      </div>
+  </div>
+
+  <div class="card" style="width: 18rem; align-items: center !important; background-color: #01a3a4;">
+      <img class="card-img-top" src="/media/profile_pics/img2_x7eKjPi.png" alt="Card image cap" style="background-size: cover;" height="180px" width="266px">
+      <div class="card-body" >
+        <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif;">SLASH HERO</h5>
+        <p class="card-text" style="font-weight: bold; color: white;">“Slash Hero” game project is created using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score points.</p>
+        <a href="{% url 'blog-panda' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem; align-items: center !important; background-color: #01a3a4;">
+      <img class="card-img-top" src="/media/profile_pics/img2_x7eKjPi.png" alt="Card image cap" style="background-size: cover;" height="180px" width="266px">
+      <div class="card-body" >
+        <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif;">Pong</h5>
+        <p class="card-text" style="font-weight: bold; color: white;">“Pong Game” game project is created using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score points.</p>
+        <a href="{% url 'blog-pong' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+      </div>
+    </div>
+    
+    <div class="card" style="width: 18rem; align-items: center !important; background-color: #01a3a4;">
+      <img class="card-img-top" src="/media/profile_pics/img2_x7eKjPi.png" alt="Card image cap" style="background-size: cover;" height="180px" width="266px">
+      <div class="card-body" >
+        <h5 class="card-title" style="font-weight: bold; font-family: Bree Serif;">Pong</h5>
+        <p class="card-text" style="font-weight: bold; color: white;">“Pong Game” game project is created using Unity Game Engine. Talking about the gameplay, user has to kill the enemy in order to gain score points.</p>
+        <a href="{% url 'blog-pong' %}" class="btn btn-danger" style="font-weight: bold;">Read More</a>
+      </div>
+    </div>
+   
+    
+    <style type="text/css">
+      .card{
+        margin-top: auto;
+        /* margin-left: 195px; */
+        display: inline-block;
+        padding: 10px 10px;
+        margin: 30px;
+      }
+      .card:hover{
+        box-shadow:0px 0px 100px black;
+      }
+      /* @media max-width:(768px) {
+       .card{
+        background-size: cover;
+       }
+      } */
+    </style>
+
+{% endblock content %}
